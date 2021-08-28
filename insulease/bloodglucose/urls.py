@@ -4,9 +4,7 @@ from django.conf.urls import url, include
 from django.urls import path
 
 
-router = routers.DefaultRouter()
+router = routers.SimpleRouter()
 router.register(r'blood-glucose', BloodGlucoseViewset)
 
-urlpatterns = [
-    path(r'^', include(router.urls))
-]
+urlpatterns = router.urls

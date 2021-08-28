@@ -19,5 +19,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('^blood-glucose/', include('insulease.bloodglucose.urls'))
+    path('blood-glucose/', include('insulease.bloodglucose.urls'))
+    # path('blood-glucose/', admin.site.urls)
 ]
