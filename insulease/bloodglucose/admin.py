@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import BloodGlucose
 
-# Register your models here.
+
+@admin.register(BloodGlucose)
+class BloodGlucoseAdmin(admin.ModelAdmin):
+    list_display = ['pk', 'patient', 'value', 'timestamp']
