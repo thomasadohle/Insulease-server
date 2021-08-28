@@ -4,4 +4,4 @@ from .models import BloodGlucose
 
 @admin.register(BloodGlucose)
 class BloodGlucoseAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['pk', 'patient', 'value', 'timestamp']
